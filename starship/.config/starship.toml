@@ -29,8 +29,8 @@ $line_break$character"""
 palette = 'kanagawa_wave'
 
 [palettes.kanagawa_wave]
-inkblack   = "#181820"
-inkdark    = "#1a1a22"
+inkblack   = "#727169"
+inkdark    = "#54546D"
 white      = "#C8C7BA"
 orange     = "#FFA066"
 green      = "#98BB6C"
