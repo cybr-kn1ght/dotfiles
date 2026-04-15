@@ -62,8 +62,8 @@ Arch = "󰣇"
 Artix = "󰣇"
 CentOS = ""
 Debian = "󰣚"
-samurai-redhat = "󱄛"
-samurai-redHatEnterprise = "󱄛"
+redhat = "󱄛"
+redHatEnterprise = "󱄛"
 
 [username]
 show_always = true
