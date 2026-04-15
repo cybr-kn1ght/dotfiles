@@ -1,0 +1,162 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](sumi-ink-5)\
+$os\
+$username\
+[](bg:surimi-orange fg:sumi-ink-5)\
+$directory\
+[](fg:surimi-orange bg:spring-green)\
+$git_branch\
+$git_status\
+[](fg:spring-green bg:wave-aqua-1)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:wave-aqua-1 bg:spring-blue)\
+$docker_context\
+[](fg:spring-blue bg:wave-blue-1)\
+$time\
+[ ](fg:wave-blue-1)\
+$line_break$character"""
+
+palette = 'kanagawa_wave'
+
+[palettes.kanagawa_wave]
+sumi-ink-0 = "#16161D"
+sumi-ink-2 = "#1A1A22"
+sumi-ink-5 = "#363646"
+old-white = "#C8C7BA"
+surimi-orange = "#FFA066"
+spring-green = "#98BB6C"
+wave-aqua-1 = "#6A9589"
+spring-blue = "#7FB4CA"
+wave-blue-1 = "#223249"
+samurai-red = "#E82424"
+
+[os]
+disabled = false
+style = "bg:sumi-ink-5 fg:old-white"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+samurai-redhat = "󱄛"
+samurai-redHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:sumi-ink-5 fg:old-white"
+style_root = "bg:sumi-ink-5 fg:old-white"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:sumi-ink-0 bg:surimi-orange"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:spring-green"
+format = '[[ $symbol $branch ](fg:sumi-ink-0 bg:spring-green)]($style)'
+
+[git_status]
+style = "bg:wave-aqua-1"
+format = '[[($all_status$ahead_behind )](fg:sumi-ink-0 bg:spring-green)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[c]
+symbol = " "
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0  bg:wave-aqua-1)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[php]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[java]
+symbol = " "
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[python]
+symbol = ""
+style = "bg:wave-aqua-1"
+format = '[[ $symbol( $version) ](fg:sumi-ink-0 bg:wave-aqua-1)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:spring-blue"
+format = '[[ $symbol( $context) ](fg:sumi-ink-0 bg:wave-blue-1)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:wave-blue-1"
+format = '[[  $time ](fg:old-white bg:wave-blue-1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:spring-green)'
+error_symbol = '[](bold fg:samurai-red)'
+vimcmd_symbol = '[](bold fg:spring-green)'
+vimcmd_replace_one_symbol = '[](bold fg:wave-blue-1)'
+vimcmd_replace_symbol = '[](bold fg:wave-blue-1)'
+vimcmd_visual_symbol = '[](bold fg:lavender)'
