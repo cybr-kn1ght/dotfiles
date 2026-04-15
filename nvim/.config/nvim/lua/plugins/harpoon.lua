@@ -35,10 +35,10 @@ return {
     map('n', '<C-e>', function() ui:toggle_quick_menu(list) end, { desc = 'Harpoon menu' })
 
     -- Jump to files 1–4
-    map('n', '<C-a>', function() list:select(1) end, { desc = 'Harpoon file 1' })
-    map('n', '<C-s>', function() list:select(2) end, { desc = 'Harpoon file 2' })
-    map('n', '<C-d>', function() list:select(3) end, { desc = 'Harpoon file 3' })
-    map('n', '<C-f>', function() list:select(4) end, { desc = 'Harpoon file 4' })
+    map('n', '<A-a>', function() list:select(1) end, { desc = 'Harpoon file 1' })
+    map('n', '<A-s>', function() list:select(2) end, { desc = 'Harpoon file 2' })
+    map('n', '<A-d>', function() list:select(3) end, { desc = 'Harpoon file 3' })
+    map('n', '<A-f>', function() list:select(4) end, { desc = 'Harpoon file 4' })
 
     -- Cycle through Harpoon list
     map('n', '<leader>n', function() list:next() end, { desc = 'Harpoon next' })
