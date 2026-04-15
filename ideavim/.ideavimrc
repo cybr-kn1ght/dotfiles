@@ -1,0 +1,236 @@
+"" .ideavimrc - Corey Barr 2026
+
+" ========================================================
+" Base Settings
+" ========================================================
+set scrolloff=10
+set relativenumber
+set showmode
+set showcmd
+
+" Remove sound when invalid input
+set visualbell
+
+" Case-insensitive searching UNLESS \C or one or more capital letters
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Map leader key to space-bar
+let mapleader = " "
+
+" Leader key timeout
+set notimeout
+
+" Use system clipboard
+set clipboard+=unnamedplus
+
+" ========================================================
+" Plugin Settings (IdeaVim loads plugins automatically)
+" ========================================================
+set surround
+set highlightedyank
+set sneak
+
+" Which-key: prefix descriptors (clean, unique, consistent)
+" Core Which-key settings
+set which-key
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#e6b400"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+
+" Root-level descriptors
+let g:WhichKeyDesc_leader_root            = "<leader> Leader menu"
+let g:WhichKeyDesc_leader_leader          = "<leader><leader> Hide tool windows"
+let g:WhichKeyDesc_leader_edit_rc         = "<leader>; Edit .ideavimrc"
+let g:WhichKeyDesc_leader_comment         = "<leader>/ Comment line"
+let g:WhichKeyDesc_leader_project         = "<C-n> Project tool window"
+let g:WhichKeyDesc_leader_terminal        = "<leader>t Terminal"
+
+" Display / layout modes
+let g:WhichKeyDesc_display_group          = "<leader>d Display modes"
+let g:WhichKeyDesc_display_df             = "<leader>dd Distraction-free mode"
+let g:WhichKeyDesc_display_zen            = "<leader>dz Zen mode"
+let g:WhichKeyDesc_display_fullscreen     = "<leader>df Full screen"
+
+" Window / splits prefix
+let g:WhichKeyDesc_window_group           = "<leader>w Window / splits"
+let g:WhichKeyDesc_window_split_vert      = "<leader>wv Split vertically"
+let g:WhichKeyDesc_window_split_horiz     = "<leader>ws Split horizontally"
+let g:WhichKeyDesc_window_unsplit         = "<leader>wu Unsplit window"
+let g:WhichKeyDesc_window_move_group      = "<leader>wm Move editor to other tab group"
+
+" Folding prefix
+let g:WhichKeyDesc_fold_group             = "<leader>z Folding"
+let g:WhichKeyDesc_fold_collapse_all      = "<leader>zc Collapse all regions"
+let g:WhichKeyDesc_fold_expand_all        = "<leader>zo Expand all regions"
+
+" Search/navigation prefix
+let g:WhichKeyDesc_search_group           = "<leader>s Search / navigate"
+let g:WhichKeyDesc_search_files           = "<leader>sf Search files"
+let g:WhichKeyDesc_search_content         = "<leader>sc Search in path (content)"
+let g:WhichKeyDesc_search_recent_files    = "<leader>s. Recent files"
+let g:WhichKeyDesc_search_recent_locations= "<leader>sl Recent locations"
+let g:WhichKeyDesc_search_recent_locations= "<leader>ss Search Symbol"
+let g:WhichKeyDesc_search_recent_locations= "<leader>sa Search All"
+
+" Actions (intentions)
+let g:WhichKeyDesc_action_group           = "<leader>a Actions / intentions"
+let g:WhichKeyDesc_action_context_menu    = "<leader>a Show intention actions"
+
+" Refactoring prefix
+let g:WhichKeyDesc_refactor_group         = "<leader>r Refactor"
+let g:WhichKeyDesc_refactor_rename        = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactor_extract_method= "<leader>rm Extract method"
+let g:WhichKeyDesc_refactor_intro_var     = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactor_intro_field   = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactor_signature     = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactor_all           = "<leader>rr Refactorings quick list"
+
+" Go-to prefix
+let g:WhichKeyDesc_goto_group             = "<leader>g Go to…"
+let g:WhichKeyDesc_goto_decl              = "<leader>gd Go to declaration"
+let g:WhichKeyDesc_goto_type              = "<leader>gy Go to type declaration"
+let g:WhichKeyDesc_goto_impl              = "<leader>gi Go to implementation"
+let g:WhichKeyDesc_goto_usages            = "<leader>gu Show usages"
+let g:WhichKeyDesc_goto_test              = "<leader>gt Go to test"
+let g:WhichKeyDesc_goto_back              = "<leader>gf Back"
+let g:WhichKeyDesc_goto_forward           = "<leader>gb Forward"
+
+" Git prefix
+let g:WhichKeyDesc_git_group              = "<leader>v Git"
+let g:WhichKeyDesc_git_commit             = "<leader>vc Commit / Check in"
+let g:WhichKeyDesc_git_status             = "<leader>vs Version control tool window"
+let g:WhichKeyDesc_git_branches           = "<leader>vb Git branches"
+
+" Errors prefix
+let g:WhichKeyDesc_errors_group           = "<leader>e Errors / inspections"
+let g:WhichKeyDesc_errors_next            = "<leader>en Next error in solution"
+let g:WhichKeyDesc_errors_prev            = "<leader>ep Previous error in solution"
+
+" Harpoon-style bookmarks (optional)
+let g:WhichKeyDesc_bookmarks_group        = "<leader>h Bookmarks"
+let g:WhichKeyDesc_bookmark_toggle_mn     = "<leader>a Toggle bookmark with mnemonic"
+let g:WhichKeyDesc_bookmark_toggle        = "<leader>m Toggle bookmark"
+let g:WhichKeyDesc_bookmark_popup         = "<leader>h Show bookmarks"
+
+" ========================================================
+" Key mappings
+" ========================================================
+
+" Center cursor on page up/down
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Clear search highlighting when pressing ESC
+nnoremap <ESC> :nohlsearch<CR><ESC>
+
+" Pane navigation (use Ctrl for reliability)
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+" Jump between methods
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Execute macro saved in 'q' register
+nnoremap qj @q
+
+" Popup navigation
+inoremap <C-j> :action PopupMenu-selectNext<CR>
+inoremap <C-k> :action PopupMenu-selectPrev<CR>
+
+" ========================================================
+" Leader commands
+" ========================================================
+
+" Comment lines
+nnoremap <leader>/ :action CommentByLineComment<CR>
+
+" Open Project Tool Window (instead of NERDTree)
+nnoremap <C-n> :action ActivateProjectToolWindow<CR>
+
+" Folding
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+" Window splits
+nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <leader>ws :action SplitHorizontally<CR>
+nnoremap <leader>wu :action Unsplit<CR>
+nnoremap <leader>wm :action MoveEditorToOppositeTabGroup<CR>
+
+" Display options
+nnoremap <leader>dd :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>dz :action ToggleZenMode<CR>
+nnoremap <leader>df :action ToggleFullScreen<CR>
+
+" Actions
+nnoremap <leader>a :action ShowIntentionActions<CR>
+
+" Search
+nnoremap <leader>sf :action GotoFile<CR>
+nnoremap <leader>s. :action RecentFiles<CR>
+nnoremap <leader>sc :action FindInPath<CR>
+nnoremap <leader>sl :action RecentLocations<CR>
+nnoremap <leader>ss :action GoToSymbol<CR>
+nnoremap <leader>sa :action Search<CR>
+
+. Refactoring
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rf :action IntroduceField<CR>
+nnoremap <leader>rs :action ChangeSignature<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+
+" Go to code
+nnoremap <leader>gd :action GotoDeclaration<CR>
+nnoremap <leader>gy :action GotoTypeDeclaration<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gu :action ShowUsages<CR>
+nnoremap <leader>gt :action GotoTest<CR>
+nnoremap <leader>gf :action Back<CR>
+nnoremap <leader>gb :action Forward<CR>
+
+" Git windows
+nnoremap <leader>vc :action CheckinProject<CR>
+nnoremap <leader>vs :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>vb :action Git.Branches<CR>
+
+" Error diagnostics
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+" Terminal
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+
+" Hover Info
+nnoremap K :action ShowHoverInfo<CR>
+
+" Close all tool windows
+nnoremap <leader><leader> :action HideAllWindows<CR>
+
+" Go to .ideavimrc
+nnoremap <leader>; :e ~/.ideavimrc<CR>
+
+
+" ========================================================
+" Harpoon-style bookmarks
+" ========================================================
+nnoremap <leader>a :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>m :action ToggleBookmark<CR>
+nnoremap <leader>h :action ShowBookmarks<CR>
+nnoremap <A-a> :action GotoBookmark1<CR>
+nnoremap <A-s> :action GotoBookmark2<CR>
+nnoremap <A-d> :action GotoBookmark3<CR>
+nnoremap <A-f> :action GotoBookmark4<CR>
+nnoremap <A-g> :action GotoBookmark5<CR>
