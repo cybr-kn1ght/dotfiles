@@ -1,0 +1,88 @@
+@import "./colours/kanagawa.css";
+
+* {
+	font-family: "JetBrainsMono Nerd Font Mono";
+	font-size: 16px;
+	transition: background-color .3s ease-out;
+}
+
+window#waybar {
+	background: transparent;
+	font-family: JetBrainsMono Nerd Font Mono;
+	transition: background-color .5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	background: @bg0;
+	margin: 5px 5px;
+	padding: 0 6px;
+	border-radius: 15px;
+}
+
+.modules-left {
+	padding: 0;
+}
+
+.modules-center {
+	padding: 0 10px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+	padding: 0 5px;
+	border-radius: 15px;
+	color: @fg;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#mpd:hover {
+	background: @bg3;
+}
+
+
+#workspaces button {
+	background: transparent;
+	font-family: JetBrainsMono Nerd Font Mono;
+	font-weight: 900;
+	font-size: 13pt;
+	color: @fg;
+	border: none;
+	border-radius: 15px;
+}
+
+#workspaces button.active {
+	background: @bg3;
+	color: @fg;
+}
+
+#workspaces button:hover {
+	background: @bg3;
+	color: @blue;
+	box-shadow: none;
+}

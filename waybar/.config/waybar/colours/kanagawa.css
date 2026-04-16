@@ -1,0 +1,56 @@
+/**************************************************************
+** Kanagawa                                                 **
+**************************************************************/
+
+/* Backgrounds */
+/* sumiInk0  */
+@define-color bg0 #16161D;
+
+/* sumiInk1 (Fondo principal) */
+@define-color bg1 #1F1F28;
+
+/* sumiInk2 */
+@define-color bg2 #2A2A37;
+
+/* sumiInk3 */
+@define-color bg3 #363646;
+
+/* sumiInk4 */
+@define-color bg4 #54546D;
+
+/* Foreground */
+/* fujiWhite */
+@define-color fg #DCD7BA;
+
+/* samuraiRed */
+@define-color red #C34043;
+
+/* surimiOrange */
+@define-color orange #FFA066;
+
+/* springYellow */
+@define-color yellow #E6C384;
+
+/* autumnGreen */
+@define-color green #98BB6C;
+
+/* waveAqua1 */
+@define-color aqua #7AA89F;
+
+/* crystalBlue */
+@define-color blue #7E9CD8;
+
+/* oniViolet */
+@define-color purple #957FB8;
+
+/* sakuraPink */
+@define-color pink #D27E99;
+
+/* fujiGrey */
+@define-color grey0 #727169;
+
+/* katanaGrey */
+@define-color grey1 #717C7C;
+
+/* masonryGrey */
+@define-color grey2 #536161;
