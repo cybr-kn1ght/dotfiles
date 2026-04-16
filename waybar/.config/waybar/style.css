@@ -1,88 +1,233 @@
 @import "./colours/kanagawa.css";
 
+/* -----------------------------------------------------------------------------
+* Base styles
+* -------------------------------------------------------------------------- */
 * {
-	font-family: "JetBrainsMono Nerd Font Mono";
-	font-size: 16px;
-	transition: background-color .3s ease-out;
+  font-family: "JetBrainsMono Nerd Font Mono";
+  font-size: 16px;
+  transition: background-color 0.3s ease-out;
 }
 
 window#waybar {
-	background: transparent;
-	font-family: JetBrainsMono Nerd Font Mono;
-	transition: background-color .5s;
+  background: transparent;
+  font-family: JetBrainsMono Nerd Font Mono;
+  transition: background-color 0.5s;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-	background: @bg0;
-	margin: 5px 5px;
-	padding: 0 6px;
-	border-radius: 15px;
+  background: @bg0;
+  margin: 5px 5px;
+  padding: 0 6px;
+  border-radius: 15px;
 }
 
 .modules-left {
-	padding: 0;
+  padding: 0;
 }
 
 .modules-center {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-	padding: 0 5px;
-	border-radius: 15px;
-	color: @fg;
+/* -----------------------------------------------------------------------------
+* Tooltips
+* -------------------------------------------------------------------------- */
+
+tooltip {
+  color: @fg;
 }
 
+tooltip label {
+  color: @fg;
+}
+
+/* -----------------------------------------------------------------------------
+* Workspaces
+* -------------------------------------------------------------------------- */
+#workspaces button {
+  background: transparent;
+  font-family: JetBrainsMono Nerd Font Mono;
+  font-weight: 900;
+  font-size: 13pt;
+  color: @fg;
+  border: none;
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+  background: @bg3;
+  color: @fg;
+}
+
+#workspaces button:hover {
+  background: @bg3;
+  color: @blue;
+  box-shadow: none;
+}
+
+/* -----------------------------------------------------------------------------
+* Clock
+* -------------------------------------------------------------------------- */
+#clock {
+  color: @blue;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+/* -----------------------------------------------------------------------------
+* System monitoring modules
+* -------------------------------------------------------------------------- */
+#memory {
+  color: @green;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+#cpu {
+  color: @red;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+#temperature {
+  color: @teal;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+/* -----------------------------------------------------------------------------
+* Battery
+* -------------------------------------------------------------------------- */
+
+#battery {
+  color: @fg;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+#battery.charging {
+  color: @blue;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+}
+
+/* -----------------------------------------------------------------------------
+* Audio and Backlight
+* -------------------------------------------------------------------------- */
+#backlight {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+#pulseaudio {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+#pulseaudio.muted {
+  color: @red;
+}
+
+/* -----------------------------------------------------------------------------
+* Network
+* -------------------------------------------------------------------------- */
+#network {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @aqua;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.disabled {
+  color: @yellow;
+}
+
+/* -----------------------------------------------------------------------------
+* Language
+* -------------------------------------------------------------------------- */
+#language {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+#keyboard-state {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+/* -----------------------------------------------------------------------------
+* Tray
+* -------------------------------------------------------------------------- */
+#tray {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+#tray > .passive {
+  opacity: 0.7;
+}
+
+#tray > .needs-attention {
+  color: @red;
+}
+
+/* -----------------------------------------------------------------------------
+* Idle inhibitor
+* -------------------------------------------------------------------------- */
+#idle_inhibitor {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+#idle_inhibitor.activated {
+  color: @yellow;
+}
+
+#mode {
+  padding: 0 5px;
+  border-radius: 15px;
+  color: @fg;
+}
+
+/* -----------------------------------------------------------------------------
+* Hover effects
+* -------------------------------------------------------------------------- */
 #clock:hover,
 #battery:hover,
 #cpu:hover,
 #memory:hover,
-#disk:hover,
+#temperature:hover,
+#backlight:hover,
 #network:hover,
 #pulseaudio:hover,
-#wireplumber:hover,
-#custom-media:hover,
-#tray:hover,
-#mode:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
-#mpd:hover {
-	background: @bg3;
-}
-
-
-#workspaces button {
-	background: transparent;
-	font-family: JetBrainsMono Nerd Font Mono;
-	font-weight: 900;
-	font-size: 13pt;
-	color: @fg;
-	border: none;
-	border-radius: 15px;
-}
-
-#workspaces button.active {
-	background: @bg3;
-	color: @fg;
-}
-
-#workspaces button:hover {
-	background: @bg3;
-	color: @blue;
-	box-shadow: none;
+#custom-launcher:hover,
+#custom-notification:hover,
+#custom-weather:hover,
+#custom-updates:hover,
+#custom-vpn:hover,
+#language:hover,
+#custom-cava:hover {
+  opacity: 0.8;
 }
