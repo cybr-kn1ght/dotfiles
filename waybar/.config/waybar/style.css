@@ -72,7 +72,7 @@ tooltip label {
 * Clock
 * -------------------------------------------------------------------------- */
 #clock {
-  color: @blue;
+  color: @fg;
   padding: 6px 8px;
   border-radius: 12px;
 }
@@ -87,7 +87,7 @@ tooltip label {
 }
 
 #cpu {
-  color: @red;
+  color: @yellow;
   padding: 6px 8px;
   border-radius: 12px;
 }
