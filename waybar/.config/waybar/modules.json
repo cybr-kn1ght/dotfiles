@@ -30,15 +30,16 @@
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "kitty -e wiremix"
   },
-  "network": {
+  "network":{
+    "interface": "wlan0",
     "format-wifi": " {essid}",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ({signalStrength}%)",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "on-click": "nm-connection-editor"
+    "on-click": "kitty -e impala"
   },
   "cpu": {
     "format": " {usage}%",
