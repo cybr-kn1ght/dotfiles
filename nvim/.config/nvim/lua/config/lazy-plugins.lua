@@ -1,6 +1,5 @@
 -- [[ Configure and install plugins ]]
 
---
 --  To check the current status of your plugins, run
 --    :Lazy
 --
@@ -8,43 +7,10 @@
 --
 --  To update plugins you can run
 --    :Lazy update
---
--- NOTE: Here is where you install your plugins.
+
 require('lazy').setup({
-  -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
-  { 'NMAC427/guess-indent.nvim', opts = {} },
-
-  -- NOTE: Plugins can also be added by using a table,
-  -- with the first argument being the link and the following
-  -- keys can be used to configure plugin behavior/loading/etc.
-  --
-  -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
-  --
-
-  -- modular approach: using `require 'path.name'` will
-  -- include a plugin definition from file lua/path/name.lua
-
-  require 'plugins.gitsigns',
-  require 'plugins.which-key',
-  require 'plugins.telescope',
-  require 'plugins.lspconfig',
-  require 'plugins.conform',
-  require 'plugins.blink-cmp',
-  require 'plugins.kanagawa',
-  require 'plugins.todo-comments',
-  require 'plugins.mini',
-  require 'plugins.treesitter',
-  require 'plugins.typescript-tools',
-  require 'plugins.nvim-tree',
-  require 'plugins.debug',
-  require 'plugins.indent_line',
-  require 'plugins.lint',
-  require 'plugins.autopairs',
-  require 'plugins.lualine',
-  require 'plugins.dashboard-nvim',
-  require 'plugins.harpoon',
-  require 'plugins.lazygit',
-  require 'plugins.toggleterm',
+  -- Load all plugins in lua/plugins
+  { import = 'plugins' },
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
