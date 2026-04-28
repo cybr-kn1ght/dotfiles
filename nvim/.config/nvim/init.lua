@@ -31,13 +31,13 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
 
 -- [[ Settings Options ]]
-require 'options'
+require 'config.options'
 
 -- [[ Basic Keymaps ]]
-require 'keymaps'
+require 'config.keymaps'
 
 -- [[ Filetypes ]]
-require 'filetypes'
+require 'config.filetypes'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require 'lazy-bootstrap'
