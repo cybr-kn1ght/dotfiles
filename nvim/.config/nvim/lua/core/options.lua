@@ -1,8 +1,6 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
---
+-- NOTE: For more options, you can see `:help option-list`
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -13,11 +11,8 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
--- Make line numbers default
+-- Make line numbers default and relative for easy jumping
 vim.o.number = true
-
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -75,7 +70,7 @@ vim.o.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
+-- If performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
@@ -90,4 +85,5 @@ vim.opt.termguicolors = true
 -- Tabs
 vim.o.showtabline = 0 -- 0 = never show, 1 = only if >1 tabs, 2 = always
 
+-- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
