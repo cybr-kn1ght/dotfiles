@@ -44,6 +44,7 @@ require('lazy').setup({
   require 'plugins.dashboard-nvim',
   require 'plugins.harpoon',
   require 'plugins.lazygit',
+  require 'plugins.toggleterm',
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
