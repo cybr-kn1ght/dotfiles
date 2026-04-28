@@ -9,6 +9,9 @@ return {
     { '<leader>tf', '<cmd>ToggleTerm direction=float<cr>', desc = 'Floating Terminal' },
     { '<leader>th', '<cmd>ToggleTerm direction=horizontal<cr>', desc = 'Horizontal Terminal' },
     { '<leader>tv', '<cmd>ToggleTerm direction=vertical<cr>', desc = 'Vertical Terminal' },
+    { '<leader>t1', '<cmd>ToggleTerm 1<cr>', desc = 'Terminal 1' },
+    { '<leader>t2', '<cmd>ToggleTerm 2<cr>', desc = 'Terminal 2' },
+    { '<leader>t3', '<cmd>ToggleTerm 3<cr>', desc = 'Terminal 3' },
   },
 
   opts = {
