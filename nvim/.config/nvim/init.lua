@@ -25,4 +25,4 @@
 require 'core'
 
 -- Load and configure plugins
-require 'config'
+require 'bootstrap'

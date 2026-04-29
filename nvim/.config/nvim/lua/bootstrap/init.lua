@@ -1,7 +1,7 @@
 -- [[ Orchestrator for Lazyvim ]]
 
 -- Install `lazy.nvim` plugin manager
-require 'config.lazy-bootstrap'
+require 'bootstrap.lazy-bootstrap'
 
 -- Configure and install plugins
-require 'config.lazy-plugins'
+require 'bootstrap.lazy-plugins'
