@@ -11,9 +11,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Select all content
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true, desc = 'Select all' })
 
--- Copy whole file to clipboard
-vim.keymap.set('n', '<C-c>', ':%y+<CR>', { noremap = true, silent = true })
-
 -- ═══════════════════════════════════════════════════════════
 -- TEXT EDITING
 -- ═══════════════════════════════════════════════════════════
