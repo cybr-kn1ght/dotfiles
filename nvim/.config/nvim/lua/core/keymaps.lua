@@ -19,10 +19,6 @@ vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true, desc = 'Se
 vim.keymap.set('n', '<A-j>', "<cmd>execute 'move .+' . v:count1<cr>==", { desc = 'Move Down' })
 vim.keymap.set('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = 'Move Up' })
 
--- Commenting (add comment above/below current line)
-vim.keymap.set('n', '<leader>cb', 'o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>', { desc = 'Add [C]omment [B]elow' })
-vim.keymap.set('n', '<leader>ca', 'O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>', { desc = 'Add [C]omment [A]bove' })
-
 -- ═══════════════════════════════════════════════════════════
 -- FILE OPERATIONS
 -- ═══════════════════════════════════════════════════════════
