@@ -42,6 +42,12 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- These mappings control the size of splits (height/width)
+vim.keymap.set('n', '<M-,>', '<c-w>5<', { desc = 'Make window pane narrower' })
+vim.keymap.set('n', '<M-.>', '<c-w>5>', { desc = 'Make window pane wider' })
+vim.keymap.set('n', '<M-t>', '<C-W>+', { desc = 'Make window pane Taller' })
+vim.keymap.set('n', '<M-s>', '<C-W>-', { desc = 'Make window pane Shorter' })
+
 -- ═══════════════════════════════════════════════════════════
 -- AUTO COMMANDS
 -- ═══════════════════════════════════════════════════════════
