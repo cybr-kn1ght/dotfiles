@@ -1,4 +1,42 @@
-# kickstart.nvim
+# kickstart.nvim | CYBR Edition
+
+```
+	             :h-                                  Nhy`                 
+	            -mh.                           h.    `Ndho                 
+	            hmh+                          oNm.   oNdhh                 
+	           `Nmhd`                        /NNmd  /NNhhd                 
+	           -NNhhy                      `hMNmmm`+NNdhhh                 
+	           .NNmhhs              ```....`..-:/./mNdhhh+                 
+	            mNNdhhh-     `.-::///+++////++//:--.`-/sd`                 
+	            oNNNdhhdo..://++//++++++/+++//++///++/-.`                  
+	       y.   `mNNNmhhhdy+/++++//+/////++//+++///++////-` `/oos:         
+	  .    Nmy:  :NNNNmhhhhdy+/++/+++///:.....--:////+++///:.`:s+          
+	  h-   dNmNmy oNNNNNdhhhhy:/+/+++/-         ---:/+++//++//.`           
+	  hd+` -NNNy`./dNNNNNhhhh+-://///    -+oo:`  ::-:+////++///:`          
+	  /Nmhs+oss-:++/dNNNmhho:--::///    /mmmmmo  ../-///++///////.         
+	   oNNdhhhhhhhs//osso/:---:::///    /yyyyso  ..o+-//////////:/.        
+	    /mNNNmdhhhh/://+///::://////     -:::- ..+sy+:////////::/:/.       
+	      /hNNNdhhs--:/+++////++/////.      ..-/yhhs-/////////::/::/`      
+	        .ooo+/-::::/+///////++++//-/ossyyhhhhs/:///////:::/::::/:      
+	        -///:::::::////++///+++/////:/+ooo+/::///////.::://::---+`     
+	        /////+//++++/////+////-..//////////::-:::--`.:///:---:::/:     
+	        //+++//++++++////+++///::--                 .::::-------::     
+	        :/++++///////////++++//////.                -:/:----::../-     
+	        -/++++//++///+//////////////               .::::---:::-.+`     
+	        `////////////////////////////:.            --::-----...-/      
+	         -///://////////////////////::::-..      :-:-:-..-::.`.+`      
+	          :/://///:///::://::://::::::/:::::::-:---::-.-....``/- -     
+	            ::::://::://::::::::::::::----------..-:....`.../- -+oo/   
+	             -/:::-:::::---://:-::-::::----::---.-.......`-/.      ``  
+	            s-`::--:::------:////----:---.-:::...-.....`./:            
+	           yMNy.`::-.--::..-dmmhhhs-..-.-.......`.....-/:`             
+	          oMNNNh. `-::--...:NNNdhhh/.--.`..``.......:/-                
+	         :dy+:`      .-::-..NNNhhd+``..`...````.-::-`                  
+	                         .-:mNdhh:.......--::::-`                      
+	                            yNh/..------..`                            
+	                                                                       
+
+```
 
 My configuration for nvim began from [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). All credit for it goes to the maintainers of the repo. I forked it in [this repo](https://github.com/cybr-kn1ght/kickstart.nvim), which is now archived, as my Neovim config will continue to develop here.
 
