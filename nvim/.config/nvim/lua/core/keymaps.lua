@@ -4,6 +4,7 @@
 -- ═══════════════════════════════════════════════════════════
 -- SEARCH & NAVIGATION
 -- ═══════════════════════════════════════════════════════════
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -17,6 +18,8 @@ vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true, desc = 'Se
 
 -- Move lines up/down
 vim.keymap.set('n', '<A-j>', "<cmd>execute 'move .+' . v:count1<cr>==", { desc = 'Move Down' })
+
+-- Move lines up/down
 vim.keymap.set('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = 'Move Up' })
 
 -- ═══════════════════════════════════════════════════════════
@@ -26,13 +29,18 @@ vim.keymap.set('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { 
 -- Save file (works in all modes)
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
 
+-- Execute file
+vim.keymap.set('n', '<leader>x', '<cmd>source %<CR>', { desc = 'E[x]ecute File' })
+
 -- ═══════════════════════════════════════════════════════════
 -- WINDOW MANAGEMENT (splitting and navigation)
 -- ═══════════════════════════════════════════════════════════
 
--- Keybinds to make split navigation easier
---  Use CTRL+<hjkl> to switch between windows
---  See `:help wincmd` for a list of all window commands
+--[[ 
+    Keybinds to make split navigation easier
+    Use CTRL+<hjkl> to switch between windows
+    See `:help wincmd` for a list of all window commands
+--]]
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
