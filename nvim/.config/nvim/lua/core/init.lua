@@ -10,4 +10,4 @@ require 'core.keymaps'
 require 'core.diagnostics'
 
 -- File type handling
-require 'core.filetypes'
+require 'core.filetype_detection'
