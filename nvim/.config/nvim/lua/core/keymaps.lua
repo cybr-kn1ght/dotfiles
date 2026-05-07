@@ -29,9 +29,10 @@ vim.keymap.set('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { 
 -- Save file (works in all modes)
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
 
--- Execute file
+-- Execute
 vim.keymap.set('n', '<leader>xf', '<cmd>source %<CR>', { desc = 'E[x]ecute [F]ile' })
-vim.keymap.set('n', '<leader>xl', ':.lua<CR>', { desc = 'E[x]ecute [L]ua Line' })
+vim.keymap.set('n', '<leader>xl', ':.lua<CR>', { desc = 'E[x]ecute [L]ua line' })
+vim.keymap.set('v', '<leader>xl', ':.lua<CR>', { desc = 'E[x]ecute selected [L]ua' })
 
 -- ═══════════════════════════════════════════════════════════
 -- WINDOW MANAGEMENT (splitting and navigation)
