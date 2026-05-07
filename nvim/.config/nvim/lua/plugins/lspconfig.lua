@@ -157,6 +157,7 @@ return {
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       -- >>>>>> GODOT LSP SETUP <<<<<<
+      -- TODO - use vim.lsp.config instead of require('lspconfig')
       local lspconfig = require 'lspconfig'
       local configs = require 'lspconfig.configs'
 
