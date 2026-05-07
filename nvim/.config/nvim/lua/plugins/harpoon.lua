@@ -39,15 +39,5 @@ return {
     map('n', '<A-s>', function() list:select(2) end, { desc = 'Harpoon file 2' })
     map('n', '<A-d>', function() list:select(3) end, { desc = 'Harpoon file 3' })
     map('n', '<A-f>', function() list:select(4) end, { desc = 'Harpoon file 4' })
-
-    -- Cycle through Harpoon list
-    map('n', '<leader>n', function() list:next() end, { desc = 'Harpoon next' })
-    map('n', '<leader>p', function() list:prev() end, { desc = 'Harpoon previous' })
-
-    -----------------------------------------------------------------------
-    -- (Optional) Harpoon terminals
-    -----------------------------------------------------------------------
-    map('n', '<leader>t1', function() term.gotoTerminal(1) end, { desc = 'Harpoon terminal 1' })
-    map('n', '<leader>t2', function() term.gotoTerminal(2) end, { desc = 'Harpoon terminal 2' })
   end,
 }
