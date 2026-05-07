@@ -76,7 +76,7 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- Column width
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '100'
 vim.opt.ruler = true
 
 -- Colour
