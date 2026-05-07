@@ -10,7 +10,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Select all content
-vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true, desc = 'Select all' })
+vim.keymap.set('n', '<leader>.', 'ggVG', { noremap = true, silent = true, desc = 'Select all' })
 
 -- ═══════════════════════════════════════════════════════════
 -- TEXT EDITING
@@ -30,7 +30,8 @@ vim.keymap.set('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { 
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
 
 -- Execute file
-vim.keymap.set('n', '<leader>x', '<cmd>source %<CR>', { desc = 'E[x]ecute File' })
+vim.keymap.set('n', '<leader>xf', '<cmd>source %<CR>', { desc = 'E[x]ecute [F]ile' })
+vim.keymap.set('n', '<leader>xl', ':.lua<CR>', { desc = 'E[x]ecute [L]ua Line' })
 
 -- ═══════════════════════════════════════════════════════════
 -- WINDOW MANAGEMENT (splitting and navigation)
