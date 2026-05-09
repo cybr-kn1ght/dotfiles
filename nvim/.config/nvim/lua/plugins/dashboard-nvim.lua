@@ -3,14 +3,17 @@ local quotes = {
   '"Sometimes you never realize the value of a moment until it becomes a memory." - Dr Seuss',
   '"Talk is cheap. Show me the code." - Linus Torvalds',
   '"In theory, theory and practice are the same. In practice, they’re not." - Yoggi Berra',
-  '"I don\'t care if it works on your machine! We are not shipping your machine!" - Vidiu Platon.',
+  '"I don\'t care if it works on your machine! We are not shipping your machine!" - Vidiu Platon',
   '“To iterate is human, to recurse divine.” - L. Peter Deutsch',
   '"The best way to predict the future is to create it." - Peter Drucker',
-  '"Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program." - Linus Torvalds',
-  '"Simplicity is the ultimate sophistication." - Leonardo da Vinci',
-  '"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." - Martin Golding',
-  '"Make it work, make it right, make it fast." - Kent Beck',
-  '"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler',
+  '“You only live once, but if you do it right, once is enough.” ― Mae West',
+  '“Be the change that you wish to see in the world.” ― Mahatma Gandhi',
+  "“If you tell the truth, you don't have to remember anything.” ― Mark Twain",
+  '“To live is the rarest thing in the world. Most people exist, that is all.” ― Oscar Wilde',
+  '“Always forgive your enemies; nothing annoys them so much.” ― Oscar Wilde',
+  '“Live as if you were to die tomorrow. Learn as if you were to live forever.” ― Mahatma Gandhi',
+  '“The fool doth think he is wise, but the wise man knows himself to be a fool.” ― William Shakespeare',
+  '“Life is what happens to us while we are making other plans.” ― Allen Saunders',
 }
 
 local doom = function()
