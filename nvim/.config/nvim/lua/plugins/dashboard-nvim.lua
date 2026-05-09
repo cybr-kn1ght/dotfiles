@@ -29,7 +29,7 @@ local doom = function()
         { icon = '+ ', desc = 'New File', key = 'n', action = 'enew' },
         { icon = ' ', desc = 'Find File', key = 'f', action = 'Telescope find_files' },
         { icon = ' ', desc = 'Recent Files', key = 'r', action = 'Telescope oldfiles' },
-        { icon = ' ', desc = 'Find Word', key = 'g', action = 'Telescope live_grep' },
+        { icon = ' ', desc = 'Find Word (Grep)', key = 'g', action = 'Telescope live_grep' },
         { icon = ' ', desc = 'Quit', key = 'q', action = 'qa' },
       },
 
