@@ -14,6 +14,7 @@ local quotes = {
   '“Live as if you were to die tomorrow. Learn as if you were to live forever.” ― Mahatma Gandhi',
   '“The fool doth think he is wise, but the wise man knows himself to be a fool.” ― William Shakespeare',
   '“Life is what happens to us while we are making other plans.” ― Allen Saunders',
+  '“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.” ― Dr. Seuss',
 }
 
 local doom = function()
