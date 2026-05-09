@@ -35,7 +35,9 @@ local doom = function()
 
       footer = {
         '',
-        'Keep on coding.',
+        '"Sometimes you never realize the value of a moment until it becomes a memory."',
+        '- Dr Seuss',
+        '',
         '',
       },
     },
