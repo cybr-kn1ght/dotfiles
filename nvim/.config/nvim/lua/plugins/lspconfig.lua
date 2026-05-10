@@ -158,33 +158,22 @@ return {
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       -- >>>>>> GODOT LSP SETUP <<<<<<
-      -- TODO - use vim.lsp.config instead of require('lspconfig')
-      local lspconfig = require 'lspconfig'
-      local configs = require 'lspconfig.configs'
-
-      if not configs.godot then
-        configs.godot = {
-          default_config = {
-            name = 'Godot',
-            cmd = (function()
-              local is_windows = vim.fn.has 'win32' == 1
-              local port = os.getenv 'GDScript_Port' or '6005'
-              if is_windows then
-                return { 'ncat', '--no-shutdown', '127.0.0.1', port }
-              else
-                return { 'nc', '127.0.0.1', port }
-              end
-            end)(),
-            filetypes = { 'gdscript' },
-            root_dir = function(fname) return lspconfig.util.root_pattern('project.godot', '.git')(fname) end,
-            single_file_support = true,
-          },
-        }
-      end
-
-      lspconfig.godot.setup {
+      vim.lsp.config('godot', {
+        cmd = (function()
+          local is_windows = vim.fn.has 'win32' == 1
+          local port = os.getenv 'GDScript_Port' or '6005'
+          if is_windows then
+            return { 'ncat', '--no-shutdown', '127.0.0.1', port }
+          else
+            return { 'nc', '127.0.0.1', port }
+          end
+        end)(),
+        filetypes = { 'gdscript' },
+        root_markers = { 'project.godot', '.git' },
+        single_file_support = true,
         capabilities = capabilities,
-      }
+      })
+      vim.lsp.enable 'godot'
       -- >>>>>> END GODOT LSP SETUP <<<<<<
 
       for name, server in pairs(servers) do
