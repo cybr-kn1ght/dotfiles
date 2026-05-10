@@ -61,11 +61,6 @@ local doom = function()
   }
 
   vim.keymap.set('n', '<leader>d', '<cmd>Dashboard<CR>', { desc = '[D]ashboard' })
-
-  -- Centre on resize
-  vim.api.nvim_create_autocmd('VimResized', {
-    callback = function() vim.cmd 'Dashboard' end,
-  })
 end
 
 return {
