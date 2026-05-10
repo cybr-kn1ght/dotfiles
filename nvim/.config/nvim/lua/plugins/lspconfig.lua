@@ -133,6 +133,7 @@ return {
         angularls = {},
         html = {},
         cssls = {},
+        omnisharp = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -148,6 +149,7 @@ return {
         'angular-language-server',
         'html-lsp',
         'css-lsp',
+        'omnisharp',
         'typescript-language-server',
 
         -- Tools
