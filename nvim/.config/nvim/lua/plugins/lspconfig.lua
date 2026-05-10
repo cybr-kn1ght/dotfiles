@@ -148,6 +148,7 @@ return {
         'angular-language-server',
         'html-lsp',
         'css-lsp',
+        'typescript-language-server',
 
         -- Tools
         'stylua', -- Used to format Lua code
