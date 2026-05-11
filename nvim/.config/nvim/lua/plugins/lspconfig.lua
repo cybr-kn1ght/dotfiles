@@ -150,7 +150,6 @@ return {
         'html-lsp',
         'css-lsp',
         'omnisharp',
-        'typescript-language-server',
 
         -- Tools
         'stylua', -- Used to format Lua code
