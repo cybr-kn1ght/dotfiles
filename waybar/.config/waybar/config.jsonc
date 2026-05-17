@@ -13,7 +13,6 @@
     "network",
     "cpu",
     "memory",
-    "temperature",
     "battery"
   ],
   "include": [
