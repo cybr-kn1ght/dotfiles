@@ -88,7 +88,10 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>sn', function() builtin.find_files { cwd = vim.fn.stdpath 'config' } end, { desc = '[S]earch [N]eovim files' })
+      vim.keymap.set('n', '<leader>sv', function() builtin.find_files { cwd = vim.fn.stdpath 'config' } end, { desc = '[S]earch Neo[v]im files' })
+
+      -- Shortcut for searching notes
+      vim.keymap.set('n', '<leader>sn', function() builtin.find_files { cwd = '~/personal/knowledge-vault' } end, { desc = '[S]earch [N]eovim files' })
 
       -- Override default behavior and theme when searching
       vim.keymap.set('n', '<leader>/', function()
