@@ -31,6 +31,13 @@ return {
         typescript = { 'prettier' },
         typescriptreact = { 'prettier' },
       },
+
+      -- Default prettier formatting if none present
+      formatters = {
+        prettier = {
+          prepend_args = { '--print-width', '100' },
+        },
+      },
     },
   },
 }
