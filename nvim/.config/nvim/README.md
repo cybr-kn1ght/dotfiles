@@ -1,7 +1,5 @@
 # kickstart.nvim | CYBR Edition                         
 
-[source](https://github.com/MaximilianLloyd/ascii.nvim)
-
 My configuration for nvim began from [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). All credit for it goes to the maintainers of the repo. I forked it in [this repo](https://github.com/cybr-kn1ght/kickstart.nvim), which is now archived, as my Neovim config will continue to develop here.
 
 
